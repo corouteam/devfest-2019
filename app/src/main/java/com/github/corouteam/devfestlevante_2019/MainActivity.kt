@@ -15,6 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        RetrofitClient.getWebservice().getShow("43467").enqueue(object: Callback<ApiResponse>{
+            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+                titleTextView.text = response.body()?.tvShow?.name
+            }
 
+            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
+
+            }
+        })
     }
 }
