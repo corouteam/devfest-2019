@@ -1,15 +1,12 @@
 package com.github.corouteam.devfestlevante_2019
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.github.corouteam.devfestlevante_2019.models.Show
 
 @Dao
 interface ShowDao {
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertShow(show: Show)
 
     @Update
@@ -20,4 +17,9 @@ interface ShowDao {
 
     @Query("select * from shows")
     fun getShows(): LiveData<List<Show>>
+
+
+
+
+
 }
