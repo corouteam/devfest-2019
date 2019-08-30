@@ -2,9 +2,13 @@ package com.github.corouteam.devfestlevante_2019
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.github.corouteam.devfestlevante_2019.models.ApiResponse
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-const val SHOW_ID = 43467
+const val SHOW_ID = "43467"
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,9 +35,17 @@ class MainActivity : AppCompatActivity() {
          */
 
         // TODO: Get data from webservice
-        // RetrofitClient.getWebservice()
+        RetrofitClient.getWebservice().getShow(SHOW_ID).enqueue(object: Callback<ApiResponse> {
+            override fun onFailure(call: Call<ApiResponse>, t: Throwable) {
 
-        //TODO: Update UI
+            }
+
+            override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+                titleTextView.text = response.body()!!.tvShow.name
+            }
+
+        })
+
 
 
     }
