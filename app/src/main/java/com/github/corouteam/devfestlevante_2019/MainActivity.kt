@@ -2,9 +2,9 @@ package com.github.corouteam.devfestlevante_2019
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.activity_main.*
+
+const val SHOW_ID = 43467
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,11 +12,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewmodel = ViewModelProviders.of(this).get(ShowViewModel::class.java)
+        // TODO: Create data class for response
+        // Ex: https://www.episodate.com/api/show-details?q={SHOW_ID}
+        // Will respond with:
+        /*
 
-        viewmodel.getShow().observe(this, Observer {
-            titleTextView.text = it?.name
-        })
+                "tvShow":{
+                "id":43467,
+                "name":"Lucifer",
+                "permalink":"lucifer",
+                "url":"https:\/\/www.episodate.com\/tv-show\/lucifer",
+                "description":"The Devil has come to Los Angeles\u2026Based upon the characters created by Neil Gaiman, Sam Kieth and Mike Dringenberg for DC Entertainment's Vertigo imprint, Lucifer<\/b> is the story of the original fallen angel. Bored and unhappy as the Lord of Hell, Lucifer Morningstar has abandoned his throne and retired to L.A., where he owns Lux, an upscale nightclub",
+                "start_date":"2016-01-25",
+                "country":"US"
+            }
+
+         */
+
+        // TODO: Get data from webservice
+        // RetrofitClient.getWebservice()
+
+        //TODO: Update UI
+
+
     }
 
 
