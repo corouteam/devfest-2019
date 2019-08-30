@@ -16,15 +16,16 @@ class MainActivity : AppCompatActivity() {
         // Ex: https://www.episodate.com/api/show-details?q={SHOW_ID}
         // Will respond with:
         /*
-
+            {
                 "tvShow":{
-                "id":43467,
-                "name":"Lucifer",
-                "permalink":"lucifer",
-                "url":"https:\/\/www.episodate.com\/tv-show\/lucifer",
-                "description":"The Devil has come to Los Angeles\u2026Based upon the characters created by Neil Gaiman, Sam Kieth and Mike Dringenberg for DC Entertainment's Vertigo imprint, Lucifer<\/b> is the story of the original fallen angel. Bored and unhappy as the Lord of Hell, Lucifer Morningstar has abandoned his throne and retired to L.A., where he owns Lux, an upscale nightclub",
-                "start_date":"2016-01-25",
-                "country":"US"
+                    "id":43467,
+                    "name":"Lucifer",
+                    "permalink":"lucifer",
+                    "url":"https:\/\/www.episodate.com\/tv-show\/lucifer",
+                    "description":"The Devil has come to Los Angeles\u2026Based upon the characters created by Neil Gaiman, Sam Kieth and Mike Dringenberg for DC Entertainment's Vertigo imprint, Lucifer<\/b> is the story of the original fallen angel. Bored and unhappy as the Lord of Hell, Lucifer Morningstar has abandoned his throne and retired to L.A., where he owns Lux, an upscale nightclub",
+                    "start_date":"2016-01-25",
+                    "country":"US"
+                }
             }
 
          */
