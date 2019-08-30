@@ -13,10 +13,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val viewmodel = ViewModelProviders.of(this).get(ShowViewModel::class.java)
-/*
+
         viewmodel.getShow().observe(this, Observer {
-            titleTextView.text = it.name
-        }) */
+            titleTextView.text = it?.name
+        })
     }
 
 
